@@ -1,7 +1,9 @@
 import { component$ } from '@builder.io/qwik'
 import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city'
 
-import './global.css'
+import { RouterHead } from '~/components/router-head/router-head'
+import '~/global.css'
+import { css } from '~/styled-system/css'
 
 export default component$(() => {
 	/**
@@ -16,11 +18,16 @@ export default component$(() => {
 			<head>
 				<meta charSet='utf-8' />
 				<link rel='manifest' href='/manifest.json' />
+				<RouterHead />
 				<ServiceWorkerRegister />
 			</head>
-			<body lang='ja'>
+			<body lang='ja' class={body}>
 				<RouterOutlet />
 			</body>
 		</QwikCityProvider>
 	)
+})
+
+const body = css({
+	bg: 'bgBase',
 })
