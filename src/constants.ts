@@ -27,7 +27,7 @@ export const OG_IMAGE: Opengraph = {
 	HEIGHT: '700',
 }
 
-export const baseMeta: DocumentMeta[] = [
+export const BASE_META: DocumentMeta[] = [
 	{
 		name: 'type',
 		content: 'website',

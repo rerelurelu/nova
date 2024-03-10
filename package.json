@@ -1,13 +1,28 @@
 {
 	"name": "my-qwik-basic-starter",
+	"devDependencies": {
+		"@biomejs/biome": "1.6.0",
+		"@builder.io/qwik": "^1.5.1",
+		"@builder.io/qwik-city": "^1.5.1",
+		"@builder.io/vite-plugin-macro": "~0.0.7",
+		"@pandacss/dev": "^0.32.1",
+		"@types/node": "^20.11.24",
+		"@vitest/ui": "^0.34.6",
+		"lefthook": "^1.6.5",
+		"prettier": "^3.2.5",
+		"typescript": "5.3.3",
+		"undici": "*",
+		"vite": "^5.1.4",
+		"vite-tsconfig-paths": "^4.2.1",
+		"vitest": "^0.34.6",
+		"wrangler": "^3.0.0"
+	},
 	"description": "Demo App with Routing built-in (recommended)",
 	"engines": {
 		"node": "^18.17.0 || ^20.3.0 || >=21.0.0"
 	},
 	"engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
 	"private": true,
-	"trustedDependencies": ["sharp"],
-	"trustedDependencies-annotation": "Needed for bun to allow running install scripts",
 	"scripts": {
 		"build": "qwik build",
 		"build.client": "vite build",
@@ -28,21 +43,9 @@
 		"prepare": "panda codegen --clean",
 		"fmt:check": "bunx @biomejs/biome check --apply ./src"
 	},
-	"devDependencies": {
-		"@biomejs/biome": "1.6.0",
-		"@builder.io/qwik": "^1.5.1",
-		"@builder.io/qwik-city": "^1.5.1",
-		"@builder.io/vite-plugin-macro": "~0.0.7",
-		"@pandacss/dev": "^0.32.1",
-		"@types/node": "^20.11.24",
-		"@vitest/ui": "^0.34.6",
-		"lefthook": "^1.6.5",
-		"prettier": "^3.2.5",
-		"typescript": "5.3.3",
-		"undici": "*",
-		"vite": "^5.1.4",
-		"vite-tsconfig-paths": "^4.2.1",
-		"vitest": "^0.34.6",
-		"wrangler": "^3.0.0"
+	"trustedDependencies": ["sharp"],
+	"trustedDependencies-annotation": "Needed for bun to allow running install scripts",
+	"dependencies": {
+		"@unpic/qwik": "^0.0.44"
 	}
 }

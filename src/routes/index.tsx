@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 import Hero from '~/components/hero/hero'
-import { baseMeta } from '~/constants'
+import { BASE_META } from '~/constants'
 import { css } from '~/styled-system/css'
 
 export default component$(() => {
@@ -17,7 +17,7 @@ export default component$(() => {
 export const head: DocumentHead = {
 	title: 'Home | Relu',
 	meta: [
-		...baseMeta,
+		...BASE_META,
 		{
 			name: 'description',
 			content: `'Relu's personal website'`,

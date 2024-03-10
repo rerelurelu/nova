@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { baseMeta } from '~/constants'
+import { BASE_META } from '~/constants'
 import { css } from '~/styled-system/css'
 import { divider } from '~/styled-system/patterns'
 
@@ -27,7 +27,7 @@ export default component$(() => {
 export const head: DocumentHead = {
 	title: '404 This page could not be found.',
 	meta: [
-		...baseMeta,
+		...BASE_META,
 		{
 			name: 'description',
 			content: '404 This page could not be found.',
