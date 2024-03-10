@@ -46,6 +46,8 @@
 	"trustedDependencies": ["sharp"],
 	"trustedDependencies-annotation": "Needed for bun to allow running install scripts",
 	"dependencies": {
-		"@unpic/qwik": "^0.0.44"
+		"@modular-forms/qwik": "^0.23.1",
+		"@unpic/qwik": "^0.0.44",
+		"qwik-sonner": "^0.2.2"
 	}
 }
