@@ -47,8 +47,13 @@
 	"trustedDependencies-annotation": "Needed for bun to allow running install scripts",
 	"dependencies": {
 		"@modular-forms/qwik": "^0.23.1",
+		"@qwikest/icons": "^0.0.13",
 		"@unpic/qwik": "^0.0.44",
 		"microcms-js-sdk": "^2.7.0",
-		"qwik-sonner": "^0.2.2"
+		"qwik-sonner": "^0.2.2",
+		"rehype-highlight": "^7.0.0",
+		"rehype-parse": "^9.0.0",
+		"rehype-sanitize": "^6.0.0",
+		"rehype-stringify": "^10.0.0"
 	}
 }
