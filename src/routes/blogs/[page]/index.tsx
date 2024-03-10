@@ -6,9 +6,10 @@ import { getCurrentIndex } from '~/utils/getCurrentIndex'
 import { component$ } from '@builder.io/qwik'
 import { useLocation } from '@builder.io/qwik-city'
 
-import type { DocumentHead } from '@builder.io/qwik-city'
+import type { DocumentHead, StaticGenerateHandler } from '@builder.io/qwik-city'
 import { BASE_META, PER_PAGE } from '~/constants'
 import { usePostsLoader } from '~/routes/layout'
+import { fetchPosts } from '~/services/post'
 
 export default component$(() => {
 	const loc = useLocation()
@@ -23,6 +24,18 @@ export default component$(() => {
 		</>
 	)
 })
+
+export const onStaticGenerate: StaticGenerateHandler = async () => {
+	const data = await fetchPosts()
+	const maxPageIndex = Math.ceil(data.totalCount / PER_PAGE)
+	const paths = [...Array(maxPageIndex).keys()].map((i) => (i + 1).toString())
+
+	return {
+		params: paths.map((page) => {
+			return { page }
+		}),
+	}
+}
 
 export const head: DocumentHead = {
 	title: 'Blog | Relu',
