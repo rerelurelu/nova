@@ -21,6 +21,7 @@
 		"preview": "qwik build preview && vite preview --open",
 		"serve": "wrangler pages dev ./dist --compatibility-flags=nodejs_als",
 		"start": "vite --open --mode ssr",
+		"test": "vitest",
 		"test.unit": "vitest components",
 		"test.unit.ui": "vitest --ui components",
 		"qwik": "qwik",
