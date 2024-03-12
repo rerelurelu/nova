@@ -1,20 +1,25 @@
 import { component$ } from '@builder.io/qwik'
-import type { DocumentHead } from '@builder.io/qwik-city'
+import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
 import BlogField from '~/components/blogField/blogField'
 import Hero from '~/components/hero/hero'
 import { BASE_META } from '~/constants'
+import { fetchPosts } from '~/services/post'
 import { css } from '~/styled-system/css'
-import { usePostsLoader } from './layout'
+
+export const usePostsLoader = routeLoader$(async () => {
+	const { posts, totalCount } = await fetchPosts({ limit: 3 })
+	return { posts, totalCount }
+})
 
 export default component$(() => {
 	const data = usePostsLoader()
-	const recentPosts = data.value.posts.slice(0, 3)
+
 	return (
 		<>
 			<div class={heroWrapper}>
 				<Hero />
 			</div>
-			<BlogField posts={recentPosts} />
+			<BlogField posts={data.value.posts} />
 		</>
 	)
 })

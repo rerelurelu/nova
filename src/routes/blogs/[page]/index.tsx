@@ -4,12 +4,18 @@ import Pagination from '~/components/pagination/pagination'
 import { getCurrentIndex } from '~/utils/getCurrentIndex'
 
 import { component$ } from '@builder.io/qwik'
-import { useLocation } from '@builder.io/qwik-city'
+import { routeLoader$, useLocation } from '@builder.io/qwik-city'
 
 import type { DocumentHead, StaticGenerateHandler } from '@builder.io/qwik-city'
 import { BASE_META, PER_PAGE } from '~/constants'
-import { usePostsLoader } from '~/routes/layout'
 import { fetchPosts } from '~/services/post'
+
+export const usePostsLoader = routeLoader$(async ({ params }) => {
+	const pageIndex = params.page
+	const offset = pageIndex ? (Number(pageIndex) - 1) * PER_PAGE : 0
+	const { posts, totalCount } = await fetchPosts({ limit: PER_PAGE, offset: offset })
+	return { posts, totalCount }
+})
 
 export default component$(() => {
 	const loc = useLocation()
