@@ -48,3 +48,6 @@ src/styled-system
 
 # Environment
 .env
+
+# Storybook
+storybook-static
