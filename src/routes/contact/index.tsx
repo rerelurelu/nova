@@ -5,6 +5,7 @@ import { routeLoader$, z } from '@builder.io/qwik-city'
 import type { InitialValues } from '@modular-forms/qwik'
 import { reset, useForm, zodForm$ } from '@modular-forms/qwik'
 import { Toaster, toast } from 'qwik-sonner'
+import Button from '~/components/button/button'
 import ContentsTitle from '~/components/contentsTitle/contentsTitle'
 import { BASE_META } from '~/constants'
 import { css } from '~/styled-system/css'
@@ -146,9 +147,9 @@ export default component$(() => {
               )}
             </Field>
           </div>
-          <button class={button} disabled={contactForm.submitting} type='submit'>
+          <Button disabled={contactForm.submitting} type={'submit'}>
             {contactForm.submitting ? 'SENDING...' : 'SEND'}
-          </button>
+          </Button>
         </div>
       </Form>
     </>
