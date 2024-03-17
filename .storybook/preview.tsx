@@ -16,4 +16,17 @@ export const parameters: Parameters = {
   docs: {
     iframeHeight: '200px',
   },
+  backgrounds: {
+    default: 'default',
+    values: [
+      {
+        name: 'default',
+        value: '#1a1e2e',
+      },
+      {
+        name: 'light',
+        value: '#f0f0f0',
+      },
+    ],
+  },
 }
