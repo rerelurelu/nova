@@ -7,6 +7,7 @@ import { reset, useForm, zodForm$ } from '@modular-forms/qwik'
 import { Toaster, toast } from 'qwik-sonner'
 import Button from '~/components/button/button'
 import ContentsTitle from '~/components/contentsTitle/contentsTitle'
+import ErrorText from '~/components/errorText/errorText'
 import { BASE_META } from '~/constants'
 import { css } from '~/styled-system/css'
 
@@ -104,7 +105,7 @@ export default component$(() => {
                     type='text'
                     value={field.value}
                   />
-                  {field.error && <p class={errorText}>{field.error}</p>}
+                  {field.error && <ErrorText>{field.error}</ErrorText>}
                 </>
               )}
             </Field>
@@ -123,7 +124,7 @@ export default component$(() => {
                     type='email'
                     value={field.value}
                   />
-                  {field.error && <p class={errorText}>{field.error}</p>}
+                  {field.error && <ErrorText>{field.error}</ErrorText>}
                 </>
               )}
             </Field>
@@ -142,7 +143,7 @@ export default component$(() => {
                     rows={10}
                     value={field.value}
                   />
-                  {field.error && <p class={errorText}>{field.error}</p>}
+                  {field.error && <ErrorText>{field.error}</ErrorText>}
                 </>
               )}
             </Field>
@@ -244,41 +245,5 @@ const textarea = css({
     borderColor: 'focusInputBorder',
     outline: '3px solid token(colors.focusInputOutline)',
     outlineOffset: '2px',
-  },
-})
-
-const errorText = css({
-  color: 'error',
-  mt: '0.75rem',
-})
-
-const button = css({
-  fontWeight: '400',
-  fontSize: '1.125rem',
-  lineHeight: '1.75rem',
-  color: 'contentsTitle',
-  w: '70%',
-  maxW: '24rem',
-  mt: '2.5rem',
-  bg: { base: 'btnBase', _hover: 'hoverBtn' },
-  display: 'inline-flex',
-  flexShrink: 0,
-  cursor: 'pointer',
-  userSelect: 'none',
-  textAlign: 'center',
-  transitionDuration: '.2s',
-  transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
-  borderRadius: '0.5rem',
-  h: '3rem',
-  minH: '3rem',
-  px: '1rem',
-  textTransform: 'uppercase',
-  textDecorationLine: 'none',
-  alignItems: 'center',
-  justifyContent: 'center',
-  _disabled: {
-    color: 'white',
-    opacity: '0.3',
-    pointerEvents: 'none',
   },
 })
