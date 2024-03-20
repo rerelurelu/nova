@@ -4,7 +4,7 @@ import { getPathname } from '../getPathname'
 describe('現在開いているページのパス（ディレクトリ名）を取得できること', () => {
   const paths = {
     home: '/',
-    blogs: '/blogs/1',
+    blogs: '/blogs/1/',
     blogDetail: '/blog/renewal-my-portfolio-site/',
     about: '/about/',
     contact: '/contact/',

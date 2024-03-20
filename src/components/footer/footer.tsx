@@ -4,7 +4,7 @@ import { css } from '~/styled-system/css'
 export default component$(() => {
   return (
     <footer class={footer}>
-      <p>© 2022 relu</p>
+      <p>© 2024 relu</p>
     </footer>
   )
 })
