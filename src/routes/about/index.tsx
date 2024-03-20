@@ -23,13 +23,13 @@ export default component$(() => {
       <span class={myName}>relu</span>
       <ul class={iconWrapper}>
         <li>
-          <Link class={iconLink} href={sns.github.href} target='_blank'>
-            <GitHubIcon class={icon} />
+          <Link class={iconLink} href={sns.github.href} target='_blank' aria-label='Link to GitHub'>
+            <GitHubIcon class={icon} alt='GitHub icon' />
           </Link>
         </li>
         <li>
-          <Link class={iconLink} href={sns.zenn.href} target='_blank'>
-            <ZennIcon class={icon} />
+          <Link class={iconLink} href={sns.zenn.href} target='_blank' aria-label='Link to Zenn'>
+            <ZennIcon class={icon} alt='Zenn icon' />
           </Link>
         </li>
       </ul>
