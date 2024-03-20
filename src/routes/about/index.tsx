@@ -19,7 +19,7 @@ const intro = {
 export default component$(() => {
   return (
     <div class={wrapper}>
-      <Avatar height={512} width={512} />
+      <Avatar />
       <span class={myName}>relu</span>
       <ul class={iconWrapper}>
         <li>

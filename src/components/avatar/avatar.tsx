@@ -1,17 +1,12 @@
 import { component$ } from '@builder.io/qwik'
-import { Image } from '@unpic/qwik'
+import AvatarIcon from '~/media/avatar.png?jsx'
 import { css } from '~/styled-system/css'
 
-type Props = {
-  width: number
-  height: number
-}
-
-export default component$(({ width, height }: Props) => {
+export default component$(() => {
   return (
     <div class={avatar}>
       <div class={imageContainer}>
-        <Image alt={`relu's avatar image`} height={height} src={'/avatar.png'} width={width} />
+        <AvatarIcon />
       </div>
     </div>
   )
