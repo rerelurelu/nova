@@ -51,3 +51,6 @@ src/styled-system
 
 # Storybook
 storybook-static
+
+# Vercel
+.vercel

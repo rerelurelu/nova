@@ -1,7 +1,6 @@
 import { Slot, component$, useStylesScoped$ } from '@builder.io/qwik'
 import '@fontsource/overpass/400.css'
 import '@fontsource/overpass/600.css'
-import { Analytics } from '@vercel/analytics/react'
 import Footer from '~/components/footer/footer'
 import Header from '~/components/header/header'
 import { css } from '~/styled-system/css'
@@ -15,7 +14,6 @@ export default component$(() => {
 
   return (
     <>
-      <Analytics />
       <Header />
       <main class={rootLayout}>
         <div class={container}>
