@@ -60,6 +60,7 @@
     "@modular-forms/qwik": "^0.23.1",
     "@qwikest/icons": "^0.0.13",
     "@unpic/qwik": "^0.0.44",
+    "@vercel/analytics": "^1.2.2",
     "microcms-js-sdk": "^2.7.0",
     "qwik-sonner": "^0.2.2",
     "rehype-highlight": "^7.0.0",
