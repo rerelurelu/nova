@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import { Link, useLocation } from '@builder.io/qwik-city'
+import { tv } from 'tailwind-variants'
 import { ENTRIES } from '~/constants'
-import { css, cva } from '~/styled-system/css'
 import { getPathname } from '~/utils/getPathname'
 
 export default component$(() => {
@@ -9,14 +9,18 @@ export default component$(() => {
   const pathname = getPathname(loc.url.pathname)
 
   return (
-    <header class={header}>
-      <ul class={ul}>
+    <header class='w-full flex items-center h-16 fixed top-0 left-0 right-0 pt-4 px-0 md:px-12 z-50 justify-center md:justify-end bg-header backdrop-blur-md'>
+      <ul class='w-max inline-flex flex-row flex-wrap list-none m-0 p-0'>
         {ENTRIES.map(({ href, content }) => {
           return (
             <li key={content}>
-              <Link class={link} href={href} id={content}>
+              <Link
+                class='bg-transparent hover:bg-transparent focus:bg-transparent gap-3 text-white items-center select-none'
+                href={href}
+                id={content}
+              >
                 <span
-                  class={gradationRecipe(content === pathname ? { visual: 'active' } : undefined)}
+                  class={textGradation({ active: content === pathname ? 'active' : undefined })}
                 >
                   {content}
                 </span>
@@ -29,59 +33,11 @@ export default component$(() => {
   )
 })
 
-const header = css({
-  w: '100%',
-  alignItems: 'center',
-  h: '4rem',
-  top: '0',
-  left: '0',
-  right: '0',
-  pt: '1rem',
-  px: { base: '0', md: '3rem' },
-  zIndex: '50',
-  display: 'flex',
-  justifyContent: { base: 'center', md: 'end' },
-  bg: 'bgHeader',
-  pos: 'fixed',
-  backdropFilter: 'blur(8px)',
-})
-
-const ul = css({
-  w: 'max-content',
-  display: 'inline-flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  listStyle: 'none',
-  m: '0',
-  p: '0',
-})
-
-const link = css({
-  bg: { _hover: 'transparent', _focus: 'transparent' },
-  gap: '0.75rem',
-  color: { base: 'white' },
-  alignItems: 'center',
-  userSelect: 'none',
-})
-
-const gradationRecipe = cva({
-  base: {
-    fontSize: { md: 'large' },
-    fontWeight: '600',
-    p: '0.5rem 0.7rem',
-    textTransform: 'capitalize',
-    fontSmoothing: 'antialiased',
-    bg: { _hover: 'activePage' },
-    backgroundClip: { _hover: 'text' },
-    WebkitTextFillColor: { _hover: 'transparent' },
-  },
+const textGradation = tv({
+  base: 'md:text-lg font-semibold p-2 capitalize antialiased hover:bg-gradient-to-b hover:from-lightCyan hover:to-lightPurple hover:bg-clip-text hover:text-transparent',
   variants: {
-    visual: {
-      active: {
-        bg: 'activePage',
-        backgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-      },
+    active: {
+      active: 'bg-gradient-to-b from-lightCyan to-lightPurple bg-clip-text text-transparent',
     },
   },
 })

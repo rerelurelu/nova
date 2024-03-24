@@ -1,70 +1,49 @@
 import { component$ } from '@builder.io/qwik'
-import { css } from '~/styled-system/css'
+import LetterWrapper from './fragments/LetterWrapper'
 
 export default component$(() => {
   return (
-    <div class={mainContainer}>
-      <div class={letter}>
+    <div class='flex justify-center items-start flex-row gap-x-12 gap-y-4 flex-wrap w-full h-[70vh] pt-32 md:pt-64 text-hero'>
+      <LetterWrapper>
         <span>□ ■</span>
         <span>■ ■</span>
         <span>□ ■</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ □</span>
         <span>□ ■</span>
         <span>□ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ □</span>
         <span>■ □</span>
         <span>■ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ ■</span>
         <span>□ □</span>
         <span>□ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ □</span>
         <span>□ ■</span>
         <span>■ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ ■</span>
         <span>□ □</span>
         <span>■ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>■ □</span>
         <span>□ ■</span>
         <span>□ □</span>
-      </div>
-      <div class={letter}>
+      </LetterWrapper>
+      <LetterWrapper>
         <span>□ □</span>
         <span>■ ■</span>
         <span>■ □</span>
-      </div>
+      </LetterWrapper>
     </div>
   )
-})
-
-const mainContainer = css({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'flex-start',
-  flexDir: 'row',
-  columnGap: '3rem',
-  rowGap: '1rem',
-  flexWrap: 'wrap',
-  w: '100%',
-  h: '70vh',
-  pt: { base: '8rem', md: '16rem' },
-  color: '#fde047',
-})
-
-const letter = css({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDir: 'column',
 })

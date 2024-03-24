@@ -1,24 +1,15 @@
 import { Slot, component$ } from '@builder.io/qwik'
 import Footer from '~/components/footer/footer'
 import Header from '~/components/header/header'
-import { css } from '~/styled-system/css'
 
 export default component$(() => {
   return (
     <>
       <Header />
-      <main class='min-h-screen'>
-        <div class={container}>
-          <Slot />
-        </div>
+      <main class='min-h-screen px-5 md:px-12 pt-16 pb-32 lg:pb-48'>
+        <Slot />
       </main>
       <Footer />
     </>
   )
-})
-
-const container = css({
-  px: { base: '1.25rem', md: '3rem' },
-  pt: '4rem',
-  pb: { base: '8rem', lg: '12rem' },
 })
