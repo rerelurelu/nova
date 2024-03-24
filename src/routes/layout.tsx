@@ -1,21 +1,13 @@
-import { Slot, component$, useStylesScoped$ } from '@builder.io/qwik'
-import '@fontsource/overpass/400.css'
-import '@fontsource/overpass/600.css'
+import { Slot, component$ } from '@builder.io/qwik'
 import Footer from '~/components/footer/footer'
 import Header from '~/components/header/header'
 import { css } from '~/styled-system/css'
 
 export default component$(() => {
-  useStylesScoped$(`
-    * {
-      font-family: 'Overpass', sans-serif;
-    }
-  `)
-
   return (
     <>
       <Header />
-      <main class={rootLayout}>
+      <main class='min-h-screen'>
         <div class={container}>
           <Slot />
         </div>
@@ -23,10 +15,6 @@ export default component$(() => {
       <Footer />
     </>
   )
-})
-
-const rootLayout = css({
-  minH: '100vh',
 })
 
 const container = css({

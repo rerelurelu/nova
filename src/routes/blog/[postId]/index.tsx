@@ -8,6 +8,7 @@ import { routeLoader$ } from '@builder.io/qwik-city'
 import type { DocumentHead, StaticGenerateHandler } from '@builder.io/qwik-city'
 import { BASE_META } from '~/constants'
 import { fetchPost, fetchPosts } from '~/services/post'
+import '~/styles/highlight.css'
 import { textSm } from '~/styles/text'
 import type { Post } from '~/types/post'
 
