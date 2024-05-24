@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik'
-import type { Props } from './button'
-import Button from './button'
+import type { Props } from './Button'
+import Button from './Button'
 
 const meta: Meta<Props> = {
   component: Button,

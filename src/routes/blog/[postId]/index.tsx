@@ -1,4 +1,4 @@
-import PostContainer from '~/components/postContainer/postContainer'
+import PostContainer from '~/components/PostContainer/PostContainer'
 import { css } from '~/styled-system/css'
 import { divider } from '~/styled-system/patterns'
 
