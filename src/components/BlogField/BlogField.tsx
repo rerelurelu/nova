@@ -4,7 +4,7 @@ import { css } from '~/styled-system/css'
 import { textSm } from '~/styles/text'
 import type { Post } from '~/types/post'
 import { getPathname } from '~/utils/getPathname'
-import PostCard from '../postCard/postCard'
+import PostCard from '../PostCard/PostCard'
 
 type Props = {
   posts: Post[]

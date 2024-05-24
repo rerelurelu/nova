@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik/*'
-import Footer from './footer'
+import Avatar from './Avatar'
 
 const meta: Meta = {
-  component: Footer,
+  component: Avatar,
 }
 
 type Story = StoryObj
@@ -10,5 +10,5 @@ type Story = StoryObj
 export default meta
 
 export const Default: Story = {
-  render: () => <Footer />,
+  render: () => <Avatar />,
 }
