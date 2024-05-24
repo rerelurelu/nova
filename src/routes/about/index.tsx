@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
-import Avatar from '~/components/avatar/avatar'
+import Avatar from '~/components/Avatar/Avatar'
 import { BASE_META } from '~/constants'
 import GitHubIcon from '~/media/github-icon.png?jsx'
 import ZennIcon from '~/media/zenn-icon.png?jsx'
