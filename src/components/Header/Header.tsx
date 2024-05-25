@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import { Link, useLocation } from '@builder.io/qwik-city'
+import { css, cva } from 'styled-system/css'
 import { ENTRIES } from '~/constants'
-import { css, cva } from '~/styled-system/css'
 import { getPathname } from '~/utils/getPathname'
 
 export default component$(() => {

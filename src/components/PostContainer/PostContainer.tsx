@@ -3,8 +3,8 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypeParse from 'rehype-parse'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
+import { css } from 'styled-system/css'
 import { unified } from 'unified'
-import { css } from '~/styled-system/css'
 
 type Props = {
   postContent: string

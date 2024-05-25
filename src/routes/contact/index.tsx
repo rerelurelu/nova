@@ -5,11 +5,11 @@ import { routeLoader$, z } from '@builder.io/qwik-city'
 import type { InitialValues } from '@modular-forms/qwik'
 import { reset, useForm, zodForm$ } from '@modular-forms/qwik'
 import { Toaster, toast } from 'qwik-sonner'
+import { css } from 'styled-system/css'
 import Button from '~/components/Button/Button'
 import ContentsTitle from '~/components/ContentsTitle/ContentsTitle'
 import ErrorText from '~/components/ErrorText/ErrorText'
 import { BASE_META } from '~/constants'
-import { css } from '~/styled-system/css'
 
 const sendMessageType = {
   success: 'メッセージの送信に成功しました 🥳',

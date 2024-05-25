@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
+import { css } from 'styled-system/css'
+import { divider } from 'styled-system/patterns'
 import { BASE_META } from '~/constants'
-import { css } from '~/styled-system/css'
-import { divider } from '~/styled-system/patterns'
 
 export default component$(() => {
   return (

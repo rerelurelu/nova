@@ -1,4 +1,4 @@
-import { css } from '~/styled-system/css'
+import { css } from 'styled-system/css'
 
 export const textSm = css({
   fontSize: '0.875rem',
