@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
+import { css } from 'styled-system/css'
 import AvatarIcon from '~/media/avatar.png?jsx'
-import { css } from '~/styled-system/css'
 
 export default component$(() => {
   return (

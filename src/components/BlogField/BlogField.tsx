@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import { Link, useLocation } from '@builder.io/qwik-city'
-import { css } from '~/styled-system/css'
+import { css } from 'styled-system/css'
 import { textSm } from '~/styles/text'
 import type { Post } from '~/types/post'
 import { getPathname } from '~/utils/getPathname'

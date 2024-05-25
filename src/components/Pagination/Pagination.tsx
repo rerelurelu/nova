@@ -1,8 +1,8 @@
 import { $, component$, useOnWindow, useStore, useVisibleTask$ } from '@builder.io/qwik'
 import { useNavigate } from '@builder.io/qwik-city'
 import { HiChevronLeftSolid, HiChevronRightSolid } from '@qwikest/icons/heroicons'
+import { css, cva } from 'styled-system/css'
 import { PER_PAGE } from '~/constants'
-import { css, cva } from '~/styled-system/css'
 import { getPagination } from '~/utils/getPagination'
 
 type Props = {
