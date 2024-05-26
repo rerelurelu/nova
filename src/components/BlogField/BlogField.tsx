@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import { Link, useLocation } from '@builder.io/qwik-city'
 import { css } from 'styled-system/css'
-import { textSm } from '~/styles/text'
+import { text } from 'styled-system/recipes'
 import type { Post } from '~/types/post'
 import { getPathname } from '~/utils/getPathname'
 import PostCard from '../PostCard/PostCard'
@@ -31,7 +31,7 @@ export default component$(({ posts }: Props) => {
         })}
       </div>
       {isHome && (
-        <Link class={[link, textSm]} href={'/blogs/1'}>
+        <Link class={[link, text({ size: 'sm' })]} href={'/blogs/1'}>
           All Posts →
         </Link>
       )}

@@ -6,9 +6,9 @@ import { component$ } from '@builder.io/qwik'
 import { routeLoader$ } from '@builder.io/qwik-city'
 
 import type { DocumentHead, StaticGenerateHandler } from '@builder.io/qwik-city'
+import { text } from 'styled-system/recipes'
 import { BASE_META } from '~/constants'
 import { fetchPost, fetchPosts } from '~/services/post'
-import { textSm } from '~/styles/text'
 import type { Post } from '~/types/post'
 
 export const usePostLoader = routeLoader$(async ({ params, status }) => {
@@ -42,7 +42,7 @@ export default component$(() => {
       <header class={header}>
         <h1 class={title}>{post.value.title}</h1>
         <div class={infoContainer}>
-          <p class={[infoText, textSm]}>Published</p>
+          <p class={[infoText, text({ size: 'sm' })]}>Published</p>
           <time dateTime={post.value.publishedAt}>{dateDisplay}</time>
         </div>
       </header>
