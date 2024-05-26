@@ -2,7 +2,7 @@ import { css } from 'styled-system/css'
 
 import { component$ } from '@builder.io/qwik'
 import { Link } from '@builder.io/qwik-city'
-import { textSm } from '~/styles/text'
+import { text } from 'styled-system/recipes'
 import type { tag } from '~/types/post'
 
 type Props = {
@@ -30,13 +30,13 @@ export default component$(({ title, href, createdAt, tags }: Props) => {
           </h2>
         </header>
         <div class={timeContainer}>
-          <time class={textSm} dateTime={createdAt}>
+          <time class={text({ size: 'sm' })} dateTime={createdAt}>
             {dateDisplay}
           </time>
           <div class={tagContainer}>
             {tags.map((tag) => (
               <div class={css({ color: 'postCard.tag' })} key={tag.id}>
-                <span class={[hashTag, textSm]}>#</span>
+                <span class={[hashTag, text({ size: 'sm' })]}>#</span>
                 <span>{tag.tagName}</span>
               </div>
             ))}
