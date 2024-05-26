@@ -41,8 +41,8 @@ export default component$(() => {
     <article class={wrapper}>
       <header class={header}>
         <h1 class={title}>{post.value.title}</h1>
-        <div class={infoContainer}>
-          <p class={[infoText, text({ size: 'sm' })]}>Published</p>
+        <div class={[infoContainer, text({ size: 'sm' })]}>
+          <p class={infoText}>Published</p>
           <time dateTime={post.value.publishedAt}>{dateDisplay}</time>
         </div>
       </header>
