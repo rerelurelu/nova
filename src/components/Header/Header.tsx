@@ -41,7 +41,7 @@ const header = css({
   zIndex: '50',
   display: 'flex',
   justifyContent: { base: 'center', md: 'end' },
-  bg: 'bgHeader',
+  bg: 'header.bg',
   pos: 'fixed',
   backdropFilter: 'blur(8px)',
 })
@@ -71,14 +71,14 @@ const gradationRecipe = cva({
     p: '0.5rem 0.7rem',
     textTransform: 'capitalize',
     fontSmoothing: 'antialiased',
-    bg: { _hover: 'activePage' },
+    bg: { _hover: 'header.active' },
     backgroundClip: { _hover: 'text' },
     WebkitTextFillColor: { _hover: 'transparent' },
   },
   variants: {
     visual: {
       active: {
-        bg: 'activePage',
+        bg: 'header.active',
         backgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       },

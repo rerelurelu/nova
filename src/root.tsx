@@ -21,13 +21,9 @@ export default component$(() => {
         <RouterHead />
         <ServiceWorkerRegister />
       </head>
-      <body lang='ja' class={body}>
+      <body lang='ja'>
         <RouterOutlet />
       </body>
     </QwikCityProvider>
   )
-})
-
-const body = css({
-  bg: 'bgBase',
 })

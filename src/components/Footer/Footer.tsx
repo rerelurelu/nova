@@ -10,9 +10,8 @@ export default component$(() => {
 })
 
 const footer = css({
-  borderTop: '1px solid token(colors.footerBorder)',
+  borderTop: '1px solid token(colors.border.section)',
   py: '3rem',
-  bg: 'bgBase',
   letterSpacing: 'widest',
   textAlign: 'center',
 })
