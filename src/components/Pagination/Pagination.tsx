@@ -103,7 +103,7 @@ const icon = css({
   w: '24px',
   h: '40px',
   lineHeight: '36px',
-  color: 'paginationIcon',
+  color: 'icon',
   _hover: {
     opacity: '0.7',
   },

@@ -124,7 +124,7 @@ const postContainer = css({
     '& li': {
       mx: '0',
       fontSize: '1rem',
-      color: 'postMain',
+      color: 'post.base',
     },
   },
 
@@ -138,7 +138,7 @@ const postContainer = css({
   '& p': {
     mb: '2rem',
     fontSize: '1rem',
-    color: 'postMain',
+    color: 'post.base',
   },
 
   '& code': {
@@ -146,8 +146,8 @@ const postContainer = css({
     mx: '0.25rem',
     borderRadius: '0.25rem',
     fontSmoothing: 'antialiased',
-    bg: 'bgCodeBlock',
-    color: 'code',
+    bg: 'bg.codeBlock',
+    color: 'post.code',
   },
 
   '& pre': {

@@ -212,18 +212,17 @@ const input = css({
   px: '1rem',
   fontSize: '1.125rem',
   lineHeight: '1.75rem',
-  border: '2px solid token(colors.inputBorder)',
+  border: '2px solid token(colors.input.border.base)',
   flexShrink: '1',
   borderRadius: '0.5rem',
-  bg: 'bgBase',
+  bg: 'bg.base',
   color: 'inherit',
   _placeholder: {
-    color: 'placeholder',
+    color: 'input.placeholder',
   },
   _focus: {
-    borderColor: 'focusInputBorder',
-    outline: '3px solid token(colors.focusInputOutline)',
-    outlineOffset: '2px',
+    borderColor: 'input.border.focus',
+    outline: 'none',
   },
 })
 
@@ -233,17 +232,16 @@ const textarea = css({
   p: '0.5rem 1rem',
   fontSize: '1.125rem',
   lineHeight: '1.75rem',
-  border: '2px solid token(colors.inputBorder)',
+  border: '2px solid token(colors.input.border.base)',
   flexShrink: 1,
   borderRadius: '0.5rem',
-  bg: 'bgBase',
+  bg: 'bg.base',
   color: 'inherit',
   _placeholder: {
-    color: 'placeholder',
+    color: 'input.placeholder',
   },
   _focus: {
-    borderColor: 'focusInputBorder',
-    outline: '3px solid token(colors.focusInputOutline)',
-    outlineOffset: '2px',
+    borderColor: 'input.border.focus',
+    outline: 'none',
   },
 })

@@ -20,7 +20,7 @@ const header = css({
 })
 
 const contentsTitle = css({
-  color: 'contentsTitle',
+  color: 'head',
   textAlign: 'center',
   fontSize: '2.25rem',
   lineHeight: '2.5rem',
