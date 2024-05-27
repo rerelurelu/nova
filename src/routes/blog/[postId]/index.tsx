@@ -1,6 +1,6 @@
 import { css } from 'styled-system/css'
 import { divider } from 'styled-system/patterns'
-import PostContainer from '~/components/PostContainer/PostContainer'
+import { PostContainer } from '~/components/PostContainer/PostContainer'
 
 import { component$ } from '@builder.io/qwik'
 import { routeLoader$ } from '@builder.io/qwik-city'

@@ -5,7 +5,7 @@ type Props = {
   title: string
 }
 
-export default component$(({ title }: Props) => {
+export const ContentsTitle = component$<Props>(({ title }) => {
   return (
     <>
       <header class={header}>

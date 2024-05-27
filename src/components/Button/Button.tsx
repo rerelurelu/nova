@@ -6,7 +6,7 @@ export type Props = {
   type: 'button' | 'submit' | 'reset' | undefined
 }
 
-export default component$(({ disabled, type }: Props) => {
+export const Button = component$<Props>(({ disabled, type }) => {
   return (
     <button class={button} disabled={disabled} type={type}>
       <Slot />

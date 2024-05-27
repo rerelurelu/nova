@@ -36,7 +36,7 @@ const highlight = async (content: string) => {
   return content
 }
 
-export default component$(({ postContent }: Props) => {
+export const PostContainer = component$<Props>(({ postContent }) => {
   const highlightedContent = useSignal('')
   useTask$(async () => {
     if (!postContent) return

@@ -4,7 +4,7 @@ import { css, cva } from 'styled-system/css'
 import { ENTRIES } from '~/constants'
 import { getPathname } from '~/utils/getPathname'
 
-export default component$(() => {
+export const Header = component$(() => {
   const loc = useLocation()
   const pathname = getPathname(loc.url.pathname)
 

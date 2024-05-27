@@ -1,7 +1,7 @@
 import { Slot, component$ } from '@builder.io/qwik'
 import { css } from 'styled-system/css'
 
-export default component$(() => {
+export const ErrorText = component$(() => {
   return (
     <p class={errorText}>
       <Slot />

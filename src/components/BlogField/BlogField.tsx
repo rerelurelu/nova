@@ -4,13 +4,13 @@ import { css } from 'styled-system/css'
 import { text } from 'styled-system/recipes'
 import type { Post } from '~/types/post'
 import { getPathname } from '~/utils/getPathname'
-import PostCard from '../PostCard/PostCard'
+import { PostCard } from '../PostCard/PostCard'
 
 type Props = {
   posts: Post[]
 }
 
-export default component$(({ posts }: Props) => {
+export const BlogField = component$<Props>(({ posts }) => {
   const loc = useLocation()
   const isHome = getPathname(loc.url.pathname) === 'home'
 
