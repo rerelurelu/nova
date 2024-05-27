@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik'
-import ErrorText from './ErrorText'
+import { ErrorText } from './ErrorText'
 
 const meta: Meta = {
   component: ErrorText,

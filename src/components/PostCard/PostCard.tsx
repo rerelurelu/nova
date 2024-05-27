@@ -12,7 +12,7 @@ type Props = {
   tags: tag[]
 }
 
-export default component$(({ title, href, createdAt, tags }: Props) => {
+export const PostCard = component$<Props>(({ title, href, createdAt, tags }) => {
   const dateDisplay = new Date(createdAt).toLocaleDateString('en-us', {
     year: 'numeric',
     month: 'short',

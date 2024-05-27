@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik'
 import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
 import { css } from 'styled-system/css'
-import BlogField from '~/components/BlogField/BlogField'
-import Hero from '~/components/Hero/Hero'
+import { BlogField } from '~/components/BlogField/BlogField'
+import { Hero } from '~/components/Hero/Hero'
 import { BASE_META } from '~/constants'
 import { fetchPosts } from '~/services/post'
 

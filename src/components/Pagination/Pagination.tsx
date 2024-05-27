@@ -10,7 +10,7 @@ type Props = {
   currentIndex: number
 }
 
-export default component$(({ totalCount, currentIndex }: Props) => {
+export const Pagination = component$<Props>(({ totalCount, currentIndex }) => {
   const store = useStore({ width: 0 })
   const maxIndex = Math.ceil(totalCount / PER_PAGE)
   const nav = useNavigate()

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik/*'
-import Avatar from './Avatar'
+import { Avatar } from './Avatar'
 
 const meta: Meta = {
   component: Avatar,

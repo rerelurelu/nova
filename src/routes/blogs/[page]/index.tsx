@@ -1,6 +1,6 @@
-import BlogField from '~/components/BlogField/BlogField'
-import ContentsTitle from '~/components/ContentsTitle/ContentsTitle'
-import Pagination from '~/components/Pagination/Pagination'
+import { BlogField } from '~/components/BlogField/BlogField'
+import { ContentsTitle } from '~/components/ContentsTitle/ContentsTitle'
+import { Pagination } from '~/components/Pagination/Pagination'
 import { getCurrentIndex } from '~/utils/getCurrentIndex'
 
 import { component$ } from '@builder.io/qwik'

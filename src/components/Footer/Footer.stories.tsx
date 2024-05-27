@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik/*'
-import Footer from './Footer'
+import { Footer } from './Footer'
 
 const meta: Meta = {
   component: Footer,

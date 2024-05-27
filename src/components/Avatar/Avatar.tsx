@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik'
 import { css } from 'styled-system/css'
 import AvatarIcon from '~/media/avatar.png?jsx'
 
-export default component$(() => {
+export const Avatar = component$(() => {
   return (
     <div class={avatar}>
       <div class={imageContainer}>
