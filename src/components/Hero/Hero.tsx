@@ -3,7 +3,7 @@ import { css } from 'styled-system/css'
 
 export const Hero = component$(() => {
   return (
-    <div class={mainContainer}>
+    <div class={container}>
       <div class={letter}>
         <span>□ ■</span>
         <span>■ ■</span>
@@ -48,7 +48,7 @@ export const Hero = component$(() => {
   )
 })
 
-const mainContainer = css({
+const container = css({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'flex-start',
@@ -57,8 +57,6 @@ const mainContainer = css({
   rowGap: '1rem',
   flexWrap: 'wrap',
   w: '100%',
-  h: '70vh',
-  pt: { base: '8rem', md: '16rem' },
   color: '#fde047',
 })
 

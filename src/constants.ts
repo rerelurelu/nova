@@ -14,9 +14,8 @@ export const TIME_BEFORE_UNMOUNT = 200 // animation duration;
 
 export const ENTRIES = [
   { href: '/', content: 'home' },
-  { href: '/blogs/1/', content: 'blog' },
   { href: '/about/', content: 'about' },
-  { href: '/contact/', content: 'contact' },
+  { href: '/blogs/1/', content: 'blog' },
 ]
 
 export const OG_IMAGE: Opengraph = {

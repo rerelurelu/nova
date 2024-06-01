@@ -1,6 +1,7 @@
 import { component$ } from '@builder.io/qwik'
 import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
 import { css } from 'styled-system/css'
+import { Grid } from 'styled-system/jsx'
 import { BlogField } from '~/components/BlogField/BlogField'
 import { Hero } from '~/components/Hero/Hero'
 import { BASE_META } from '~/constants'
@@ -15,12 +16,19 @@ export default component$(() => {
   const data = usePostsLoader()
 
   return (
-    <>
-      <div class={heroWrapper}>
+    <Grid h={'100%'} gridTemplateRows={'1fr auto'} gap={{ base: '6rem', md: '8rem' }}>
+      <div
+        class={css({
+          w: '100%',
+          h: 'fit-content',
+          display: 'flex',
+          justifyContent: 'center',
+        })}
+      >
         <Hero />
       </div>
       <BlogField posts={data.value.posts} />
-    </>
+    </Grid>
   )
 })
 
@@ -42,10 +50,3 @@ export const head: DocumentHead = {
     },
   ],
 }
-
-const heroWrapper = css({
-  w: '100%',
-  h: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-})

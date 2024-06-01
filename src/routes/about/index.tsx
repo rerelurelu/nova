@@ -62,7 +62,6 @@ export const head: DocumentHead = {
 const wrapper = css({
   display: 'grid',
   placeItems: 'center',
-  mt: { base: '8rem', md: '9rem' },
   px: '1.5rem',
 })
 

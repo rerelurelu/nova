@@ -1,9 +1,9 @@
 import { component$ } from '@builder.io/qwik'
-import { Link, useLocation } from '@builder.io/qwik-city'
+import { useLocation } from '@builder.io/qwik-city'
 import { css } from 'styled-system/css'
-import { text } from 'styled-system/recipes'
 import type { Post } from '~/types/post'
 import { getPathname } from '~/utils/getPathname'
+import { TextLink } from '../Link/TextLink'
 import { PostCard } from '../PostCard/PostCard'
 
 type Props = {
@@ -17,7 +17,14 @@ export const BlogField = component$<Props>(({ posts }) => {
   return (
     <section class={blogFieldContainer}>
       {isHome && <h2 class={sectionTitle}>Recent Posts</h2>}
-      <div class={postCardsContainer}>
+      <div
+        class={[
+          postCardsContainer,
+          isHome
+            ? css({ mt: { base: '2rem', md: '3rem' } })
+            : css({ mt: { base: '6rem', md: '8rem' } }),
+        ]}
+      >
         {posts.map((post) => {
           return (
             <PostCard
@@ -31,9 +38,15 @@ export const BlogField = component$<Props>(({ posts }) => {
         })}
       </div>
       {isHome && (
-        <Link class={[link, text({ size: 'sm' })]} href={'/blogs/1'}>
-          All Posts →
-        </Link>
+        <TextLink
+          text='See all posts →'
+          href={'/blogs/1'}
+          style={css({
+            mt: { base: '2rem', md: '3rem' },
+            display: 'inline-block',
+            textDecoration: 'underline',
+          })}
+        />
       )}
     </section>
   )
@@ -44,7 +57,6 @@ const blogFieldContainer = css({
   justifyItems: 'center',
   w: '100%',
   mx: 'auto',
-  mt: { base: '4rem', md: '9rem' },
 })
 
 const sectionTitle = css({
@@ -56,7 +68,6 @@ const sectionTitle = css({
 })
 
 const postCardsContainer = css({
-  mt: { base: '2rem', md: '3rem' },
   display: 'grid',
   w: '100%',
   maxW: '1024px',
@@ -66,10 +77,4 @@ const postCardsContainer = css({
     md: 'repeat(2, minmax(0, 1fr))',
     lg: 'repeat(3, minmax(0, 1fr))',
   },
-})
-
-const link = css({
-  mt: { base: '3rem', md: '4rem' },
-  display: 'inline-block',
-  textDecoration: 'underline',
 })
