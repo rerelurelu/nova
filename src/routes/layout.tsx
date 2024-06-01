@@ -1,7 +1,7 @@
 import { Slot, component$, useStylesScoped$ } from '@builder.io/qwik'
 import '@fontsource/overpass/400.css'
 import '@fontsource/overpass/600.css'
-import { css } from 'styled-system/css'
+import { Flex, Grid } from 'styled-system/jsx'
 import { Footer } from '~/components/Footer/Footer'
 import { Header } from '~/components/Header/Header'
 
@@ -13,24 +13,12 @@ export default component$(() => {
   `)
 
   return (
-    <>
+    <Grid minH={'100vh'} gridTemplateRows={'auto 1fr auto'} rowGap={{ base: '6rem', md: '8rem' }}>
       <Header />
-      <main class={rootLayout}>
-        <div class={container}>
-          <Slot />
-        </div>
-      </main>
+      <Flex alignItems={'start'} justifyContent={'center'}>
+        <Slot />
+      </Flex>
       <Footer />
-    </>
+    </Grid>
   )
-})
-
-const rootLayout = css({
-  minH: '100vh',
-})
-
-const container = css({
-  px: { base: '1.25rem', md: '3rem' },
-  pt: '4rem',
-  pb: { base: '8rem', lg: '12rem' },
 })

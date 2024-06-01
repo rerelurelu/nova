@@ -8,15 +8,9 @@ type Props = {
 export const ContentsTitle = component$<Props>(({ title }) => {
   return (
     <>
-      <header class={header}>
-        <h1 class={contentsTitle}>{title}</h1>
-      </header>
+      <h1 class={contentsTitle}>{title}</h1>
     </>
   )
-})
-
-const header = css({
-  m: { base: '8rem auto 0', md: '10rem auto 0' },
 })
 
 const contentsTitle = css({

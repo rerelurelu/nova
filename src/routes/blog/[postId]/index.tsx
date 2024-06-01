@@ -38,7 +38,7 @@ export default component$(() => {
   })
 
   return (
-    <article class={wrapper}>
+    <div class={wrapper}>
       <header class={header}>
         <h1 class={title}>{post.value.title}</h1>
         <div class={[infoContainer, text({ size: 'sm' })]}>
@@ -58,7 +58,7 @@ export default component$(() => {
       <div class={postWrapper}>
         <PostContainer postContent={post.value.content} />
       </div>
-    </article>
+    </div>
   )
 })
 
@@ -101,8 +101,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
 }
 
 const wrapper = css({
-  mx: 'auto',
-  mt: { base: '6rem', md: '8rem' },
+  w: '100%',
   maxW: '48rem',
   display: 'flex',
   flexDir: 'column',

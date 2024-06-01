@@ -42,7 +42,7 @@ const header = css({
   display: 'flex',
   justifyContent: { base: 'center', md: 'end' },
   bg: 'header.bg',
-  pos: 'fixed',
+  pos: 'sticky',
   backdropFilter: 'blur(8px)',
 })
 
