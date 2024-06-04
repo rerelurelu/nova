@@ -7,6 +7,7 @@ import { component$ } from '@builder.io/qwik'
 import { routeLoader$, useLocation } from '@builder.io/qwik-city'
 
 import type { DocumentHead, StaticGenerateHandler } from '@builder.io/qwik-city'
+import { Grid } from 'styled-system/jsx'
 import { BASE_META, PER_PAGE } from '~/constants'
 import { fetchPosts } from '~/services/post'
 
@@ -23,11 +24,11 @@ export default component$(() => {
   const data = usePostsLoader()
 
   return (
-    <>
+    <Grid placeItems={'center'}>
       <ContentsTitle title={'Blog'} />
       <BlogField posts={data.value.posts} />
       <Pagination currentIndex={currentIndex} totalCount={data.value.totalCount} />
-    </>
+    </Grid>
   )
 })
 
