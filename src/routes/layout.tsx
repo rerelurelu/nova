@@ -15,7 +15,7 @@ export default component$(() => {
   return (
     <Grid minH={'100vh'} gridTemplateRows={'auto 1fr auto'} rowGap={{ base: '6rem', md: '8rem' }}>
       <Header />
-      <Flex alignItems={'start'} justifyContent={'center'}>
+      <Flex alignItems={'start'} justifyContent={'center'} px={{ base: '2rem', md: 0 }}>
         <Slot />
       </Flex>
       <Footer />
