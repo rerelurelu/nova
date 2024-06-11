@@ -66,7 +66,7 @@ const link = css({
 
 const gradationRecipe = cva({
   base: {
-    fontSize: { md: 'large' },
+    fontSize: 'large',
     fontWeight: '600',
     p: '0.5rem 0.7rem',
     textTransform: 'capitalize',
