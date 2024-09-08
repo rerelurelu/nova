@@ -75,7 +75,7 @@ const cardTitle = css({
   fontSize: '1.125rem',
   fontWeight: '600',
   lineHeight: '1.75rem',
-  overflowWrap: 'break-word',
+  textWrap: 'pretty',
   display: 'flex',
   alignItems: 'center',
   gap: '0.5rem',

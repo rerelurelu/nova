@@ -119,6 +119,7 @@ const title = css({
   fontSize: '2.25rem',
   lineHeight: '2.5rem',
   fontWeight: '600',
+  textWrap: 'pretty',
 })
 
 const infoContainer = css({
