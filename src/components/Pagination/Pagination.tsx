@@ -2,6 +2,7 @@ import { $, component$, useOnWindow, useStore, useVisibleTask$ } from '@builder.
 import { useNavigate } from '@builder.io/qwik-city'
 import { HiChevronLeftSolid, HiChevronRightSolid } from '@qwikest/icons/heroicons'
 import { css, cva } from 'styled-system/css'
+import { Flex } from 'styled-system/jsx'
 import { PER_PAGE } from '~/constants'
 import { getPagination } from '~/utils/getPagination'
 
@@ -34,20 +35,55 @@ export const Pagination = component$<Props>(({ totalCount, currentIndex }) => {
   })
 
   return (
-    <div class={wrapper}>
+    <Flex
+      mt={{ base: '4rem', md: '6rem' }}
+      justifyContent={'center'}
+      alignItems={'center'}
+      flexWrap={'wrap'}
+      gap='0.5rem'
+    >
       {currentIndex !== 1 && (
-        <li class={iconContainer}>
+        <li
+          class={css({
+            w: '24px',
+            h: '40px',
+            lineHeight: '36px',
+            display: 'grid',
+            placeItems: 'center',
+            textAlign: 'center',
+          })}
+        >
           <button
             type='button'
             class={button({ visual: 'icon' })}
             onClick$={async () => await handlePagination(currentIndex - 1)}
           >
-            <HiChevronLeftSolid class={icon} />
+            <HiChevronLeftSolid
+              class={css({
+                w: '24px',
+                h: '40px',
+                lineHeight: '36px',
+                color: 'icon',
+                _hover: {
+                  opacity: '0.7',
+                },
+              })}
+            />
           </button>
         </li>
       )}
       {pagination.map((number) => (
-        <li class={indexContainer} key={number}>
+        <li
+          class={css({
+            w: '40px',
+            h: '40px',
+            lineHeight: '36px',
+            display: 'grid',
+            placeItems: 'center',
+            textAlign: 'center',
+          })}
+          key={number}
+        >
           <button
             type='button'
             class={button({ visual: currentIndex === number ? 'currentPage' : 'default' })}
@@ -58,55 +94,37 @@ export const Pagination = component$<Props>(({ totalCount, currentIndex }) => {
         </li>
       ))}
       {currentIndex !== maxIndex && (
-        <li class={iconContainer}>
+        <li
+          class={css({
+            w: '24px',
+            h: '40px',
+            lineHeight: '36px',
+            display: 'grid',
+            placeItems: 'center',
+            textAlign: 'center',
+          })}
+        >
           <button
             type='button'
             class={button({ visual: 'icon' })}
             onClick$={async () => await handlePagination(currentIndex + 1)}
           >
-            <HiChevronRightSolid class={icon} />
+            <HiChevronRightSolid
+              class={css({
+                w: '24px',
+                h: '40px',
+                lineHeight: '36px',
+                color: 'icon',
+                _hover: {
+                  opacity: '0.7',
+                },
+              })}
+            />
           </button>
         </li>
       )}
-    </div>
+    </Flex>
   )
-})
-
-const wrapper = css({
-  mt: { base: '4rem', md: '6rem' },
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-  gap: '0.5rem',
-})
-
-const indexContainer = css({
-  w: '40px',
-  h: '40px',
-  lineHeight: '36px',
-  display: 'grid',
-  placeItems: 'center',
-  textAlign: 'center',
-})
-
-const iconContainer = css({
-  w: '24px',
-  h: '40px',
-  lineHeight: '36px',
-  display: 'grid',
-  placeItems: 'center',
-  textAlign: 'center',
-})
-
-const icon = css({
-  w: '24px',
-  h: '40px',
-  lineHeight: '36px',
-  color: 'icon',
-  _hover: {
-    opacity: '0.7',
-  },
 })
 
 const button = cva({

@@ -20,23 +20,90 @@ export const PostCard = component$<Props>(({ title, href, createdAt, tags }) => 
   })
 
   return (
-    <article class={card}>
-      <div class={cardBody}>
-        <header class={cardHeader}>
-          <h2 class={cardTitle}>
-            <Link class={link} href={href}>
+    <article
+      class={css({
+        pos: 'relative',
+        display: 'flex',
+        flexDir: 'column',
+        borderRadius: '1rem',
+        h: '12rem',
+        overflow: 'hidden',
+        bg: 'postCard.bg',
+      })}
+    >
+      <div
+        class={css({
+          color: 'postCard.title.base',
+          p: '1.25rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          flex: '1 1 auto',
+          flexDir: 'column',
+          gap: '0.5rem',
+        })}
+      >
+        <header
+          class={css({
+            pb: 'auto',
+          })}
+        >
+          <h2
+            class={css({
+              fontSize: '1.125rem',
+              fontWeight: '600',
+              lineHeight: '1.75rem',
+              textWrap: 'pretty',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+            })}
+          >
+            <Link
+              class={css({
+                _hover: {
+                  color: 'postCard.title.hover',
+                  cursor: 'pointer',
+                },
+              })}
+              href={href}
+            >
               {title}
             </Link>
           </h2>
         </header>
-        <div class={timeContainer}>
+        <div
+          class={css({
+            display: 'flex',
+            flexDir: 'column',
+            justifyContent: 'end',
+          })}
+        >
           <time class={text({ size: 'sm' })} dateTime={createdAt}>
             {dateDisplay}
           </time>
-          <div class={tagContainer}>
+          <div
+            class={css({
+              mt: '0.5rem',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+              columnGap: '0.5rem',
+              rowGap: '0',
+            })}
+          >
             {tags.map((tag) => (
               <div class={css({ color: 'postCard.tag' })} key={tag.id}>
-                <span class={[hashTag, text({ size: 'sm' })]}>#</span>
+                <span
+                  class={[
+                    css({
+                      mr: '1px',
+                    }),
+                    text({ size: 'sm' }),
+                  ]}
+                >
+                  #
+                </span>
                 <span>{tag.tagName}</span>
               </div>
             ))}
@@ -45,65 +112,4 @@ export const PostCard = component$<Props>(({ title, href, createdAt, tags }) => 
       </div>
     </article>
   )
-})
-
-const card = css({
-  pos: 'relative',
-  display: 'flex',
-  flexDir: 'column',
-  borderRadius: '1rem',
-  h: '12rem',
-  overflow: 'hidden',
-  bg: 'postCard.bg',
-})
-
-const cardBody = css({
-  color: 'postCard.title.base',
-  p: '1.25rem',
-  display: 'flex',
-  justifyContent: 'space-between',
-  flex: '1 1 auto',
-  flexDir: 'column',
-  gap: '0.5rem',
-})
-
-const cardHeader = css({
-  pb: 'auto',
-})
-
-const cardTitle = css({
-  fontSize: '1.125rem',
-  fontWeight: '600',
-  lineHeight: '1.75rem',
-  textWrap: 'pretty',
-  display: 'flex',
-  alignItems: 'center',
-  gap: '0.5rem',
-})
-
-const link = css({
-  _hover: {
-    color: 'postCard.title.hover',
-    cursor: 'pointer',
-  },
-})
-
-const timeContainer = css({
-  display: 'flex',
-  flexDir: 'column',
-  justifyContent: 'end',
-})
-
-const tagContainer = css({
-  mt: '0.5rem',
-  display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'flex-start',
-  justifyContent: 'flex-start',
-  columnGap: '0.5rem',
-  rowGap: '0',
-})
-
-const hashTag = css({
-  mr: '1px',
 })

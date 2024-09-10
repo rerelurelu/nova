@@ -38,11 +38,51 @@ export default component$(() => {
   })
 
   return (
-    <div class={wrapper}>
-      <header class={header}>
-        <h1 class={title}>{post.value.title}</h1>
-        <div class={[infoContainer, text({ size: 'sm' })]}>
-          <p class={infoText}>Published</p>
+    <div
+      class={css({
+        w: '100%',
+        maxW: '48rem',
+        display: 'flex',
+        flexDir: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      })}
+    >
+      <header
+        class={css({
+          display: 'grid',
+          justifyItems: 'center',
+          gap: '3rem',
+        })}
+      >
+        <h1
+          class={css({
+            fontSize: '2.25rem',
+            lineHeight: '2.5rem',
+            fontWeight: '600',
+            textWrap: 'pretty',
+          })}
+        >
+          {post.value.title}
+        </h1>
+        <div
+          class={[
+            css({
+              display: 'grid',
+              justifyItems: 'center',
+              gap: '0.25rem',
+              fontSmoothing: 'antialiased',
+            }),
+            text({ size: 'sm' }),
+          ]}
+        >
+          <p
+            class={css({
+              fontWeight: '600',
+            })}
+          >
+            Published
+          </p>
           <time dateTime={post.value.publishedAt}>{dateDisplay}</time>
         </div>
       </header>
@@ -55,7 +95,15 @@ export default component$(() => {
           color: 'divider',
         })}
       />
-      <div class={postWrapper}>
+      <div
+        class={css({
+          mt: '5rem',
+          w: '100%',
+          fontSize: '1.125rem',
+          lineHeight: '1.75rem',
+          letterSpacing: '0.025rem',
+        })}
+      >
         <PostContainer postContent={post.value.content} />
       </div>
     </div>
@@ -99,44 +147,3 @@ export const head: DocumentHead = ({ resolveValue }) => {
     ],
   }
 }
-
-const wrapper = css({
-  w: '100%',
-  maxW: '48rem',
-  display: 'flex',
-  flexDir: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-})
-
-const header = css({
-  display: 'grid',
-  justifyItems: 'center',
-  gap: '3rem',
-})
-
-const title = css({
-  fontSize: '2.25rem',
-  lineHeight: '2.5rem',
-  fontWeight: '600',
-  textWrap: 'pretty',
-})
-
-const infoContainer = css({
-  display: 'grid',
-  justifyItems: 'center',
-  gap: '0.25rem',
-  fontSmoothing: 'antialiased',
-})
-
-const infoText = css({
-  fontWeight: '600',
-})
-
-const postWrapper = css({
-  mt: '5rem',
-  w: '100%',
-  fontSize: '1.125rem',
-  lineHeight: '1.75rem',
-  letterSpacing: '0.025rem',
-})
