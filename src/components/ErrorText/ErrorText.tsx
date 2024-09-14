@@ -3,13 +3,13 @@ import { css } from 'styled-system/css'
 
 export const ErrorText = component$(() => {
   return (
-    <p class={errorText}>
+    <p
+      class={css({
+        color: 'error',
+        mt: '0.75rem',
+      })}
+    >
       <Slot />
     </p>
   )
-})
-
-const errorText = css({
-  color: 'error',
-  mt: '0.75rem',
 })

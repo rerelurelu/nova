@@ -8,16 +8,18 @@ type Props = {
 export const ContentsTitle = component$<Props>(({ title }) => {
   return (
     <>
-      <h1 class={contentsTitle}>{title}</h1>
+      <h1
+        class={css({
+          color: 'head',
+          textAlign: 'center',
+          fontSize: '2.25rem',
+          lineHeight: '2.5rem',
+          fontWeight: '400',
+          letterSpacing: '0.1em',
+        })}
+      >
+        {title}
+      </h1>
     </>
   )
-})
-
-const contentsTitle = css({
-  color: 'head',
-  textAlign: 'center',
-  fontSize: '2.25rem',
-  lineHeight: '2.5rem',
-  fontWeight: '400',
-  letterSpacing: '0.1em',
 })
