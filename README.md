@@ -7,7 +7,7 @@ This website built with
 - [microCMS](https://microcms.io)
 - [Vercel](https://vercel.com)
 
-[Visit the site](https://relu.nexus)
+[Visit the site](https://leakyrelu.me)
 
 ```
 □ ■   ■ □   ■ □   ■ ■   ■ □   ■ ■   ■ □   □ □
